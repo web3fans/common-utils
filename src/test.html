@@ -1,0 +1,42 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-12-01 20:50:40
+ * @LastEditTime: 2019-12-01 20:50:44
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /work/utils/test.html
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试javascript中的函数</title>
+<link rel="stylesheet" type="text/css" href="body.css">
+<script type="text/javascript">
+	function test(name, message) {
+		/**
+		在调用该函数时，可以传参数，也可以传部分参数，也可以不传参数，注意：(如果某个形参在函数中使用了.点操作符，而在真
+		正实际调用该函数时，该形参的实参不传，则会导致程序报错)
+		 */
+		alert("arguments=" + arguments + "arguments[0]" + arguments[0]
+				+ "arguments[1]" + arguments[1]);
+		alert(name);
+		alert(message);
+		alert("我的名字是：" + name + "内容消息是：" + message);
+		alert("name参数的长度=" + name.length);
+		alert("message参数的长度=" + message.length);
+		alert("我是方法的结尾");
+	}
+</script>
+</head>
+<body>
+	<h2>测试javascript中的函数</h2>
+	<input type="button" value="调用test函数(传2个参数)"
+		οnclick="test('令狐冲', '你们去改变世界,我只想认真赚钱！')">
+	<br><br>
+	<input type="button" value="调用test函数(什么参数都不传)" οnclick="test()">
+	<br><br>
+	<input type="button" value="调用test函数(传1个参数)" οnclick="test('令狐冲')">
+	<br><br>
+</body>
+</html>
