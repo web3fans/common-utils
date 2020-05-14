@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-15 00:14:51
- * @LastEditTime: 2020-05-15 00:25:55
+ * @LastEditTime: 2020-05-15 00:27:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /work/common-utils/src/sort/insertSort.js
@@ -17,8 +17,11 @@ const insertSort = (arr) => {
       for(;j >=0;j--){
           if(value < arr[j]){
               arr[j+ 1] = arr[j];
+          }else{ 
+              break;
           }
       }
+      a[j+1] = value; // 插入数据
   }
   return arr;
 }
